@@ -1,0 +1,34 @@
+{
+  "name": "cornerstone",
+  "version": "1.0.1",
+  "description": "ui cypress bdd test",
+  "main": "e2e.js",
+  "scripts": {
+    "cypress:runner": "cypress open",
+    "cypress:test": "cypress run",
+    "start:matrixTest": "npm run --browser=\"${{ matrix.browser }}\" --env TAGS=\"${{ matrix.tags }}\",configFile=${{ matrix.env }}"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^12.1.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.3",
+    "@reportportal/agent-js-cypress": "^5.0.4",
+    "cypress": "^10.7.0",
+    "cypress-otp": "^1.0.3",
+    "fs-extra": "^10.1.0",
+    "cypress-multi-reporters": "^1.6.1",
+    "multiple-cucumber-html-reporter": "^2.0.0"
+  },
+  "dependencies": {
+    "cypress-multi-reporters": "^1.6.1",
+    "debug": "^4.3.4",
+    "npm": "^8.19.1",
+    "prettier": "^2.7.1",
+    "cross-env": "^7.0.3"
+  },
+  "retries": {
+    "runMode": 3
+  }
+}
