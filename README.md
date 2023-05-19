@@ -1,4 +1,4 @@
-# Cypress (cucumber) tests for cornerstone store guest checkout flow
+# Cypress (cucumber) tests for saucelab login functionality and page navigation
 
 # Developer setup
 
@@ -21,5 +21,9 @@ npm link cypress-cucumber-preprocessor
 ## Running tests
 You have to run the following command to run the test
 ```bash
-npx cypress open
+npx cypress open - To run the test in browser
+```
+
+```bash
+npx cypress run - To run the test in command line
 ```
