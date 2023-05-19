@@ -27,3 +27,19 @@ npx cypress open - To run the test in browser
 ```bash
 npx cypress run - To run the test in command line
 ```
+
+Project Structure:
+Created the POM structure:
+a. Inside the project directory, created the following folders:
+
+cypress/e2e: This folder contain the features directory and step_definitions directory.
+a. Inside the cypress/e2e/features folder, created the feature files for each regression scenario. For example:
+
+sauceDemoLogin.feature: Contains test cases related to the login functionality.
+
+b. Inside the cypress/e2e/step_definitions folder, created the step definition for the feature file scenarios.
+
+cypress/pages: This folder contains page object classes.
+
+productList.js: Contains methods and elements related to the products page.
+sauceDemoLandingPage.js: Contains methods and elements related to the login page.
