@@ -28,7 +28,7 @@ npx cypress open - To run the test in browser
 npx cypress run - To run the test in command line
 ```
 
-Project Structure:
+## Project Structure:
 Created the POM structure:
 a. Inside the project directory, created the following folders:
 
