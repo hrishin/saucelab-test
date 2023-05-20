@@ -27,7 +27,7 @@
     "npm": "^8.19.1",
     "prettier": "^2.7.1",
     "cross-env": "^7.0.3",
-    "esbuild": "^2.2.0"
+    "esbuild": "^0.17.8"
   },
   "retries": {
     "runMode": 3
