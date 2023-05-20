@@ -23,26 +23,7 @@ module.exports = defineConfig({
     runMode: 1,
   },
   e2e: {
-    async setupNodeEvents(on, config) {
-
-
-      console.log(`Tests are running on ${config.env.environment} environment`);
-	  
-      on("task", {
-        generateOTP: require("cypress-otp")
-      })
-	  
-      const bundler = createBundler({
-        plugins: [createEsbuildPlugin(config)],
-      });
-
-      on("file:preprocessor", bundler);
-      await addCucumberPreprocessorPlugin(on, config);
-
-      await registerReportPortalPlugin(on, config);
-
-      return config;
-    },
+    
     experimentalSessionAndOrigin: true,
     specPattern: 'cypress/e2e/features/*.feature',
     
