@@ -1,8 +1,8 @@
-<testsuite name="Mocha Tests" tests="6" failures="0" errors="0" skipped="0" timestamp="Thu, 18 May 2023 13:41:31 GMT" time="5.213">
-<testcase classname="User login and logout validation" name="Landing page title and text validation" time="0.382"/>
-<testcase classname="User login and logout validation" name="Successful user login validation" time="0.976"/>
-<testcase classname="User login and logout validation" name="Logout functionality for logged in user" time="1.321"/>
-<testcase classname="User login and logout validation" name="Login page username textbox required field validation" time="0.258"/>
-<testcase classname="User login and logout validation" name="Login page password textbox required field validation" time="0.503"/>
-<testcase classname="User login and logout validation" name="Login page invalid username password validation" time="0.911"/>
+<testsuite name="Mocha Tests" tests="6" failures="0" errors="0" skipped="0" timestamp="Sat, 20 May 2023 04:21:27 GMT" time="5.714">
+<testcase classname="User login and logout validation" name="Landing page title and text validation" time="0.46"/>
+<testcase classname="User login and logout validation" name="Successful user login validation" time="1.1"/>
+<testcase classname="User login and logout validation" name="Logout functionality for logged in user" time="1.38"/>
+<testcase classname="User login and logout validation" name="Login page username textbox required field validation" time="0.239"/>
+<testcase classname="User login and logout validation" name="Login page password textbox required field validation" time="0.506"/>
+<testcase classname="User login and logout validation" name="Login page invalid username password validation" time="0.905"/>
 </testsuite>
