@@ -5,7 +5,7 @@ const password = 'password123';
 let authToken;
 let bookingId;
 
-Given('1. I am authenticated', () => {
+Given('I am authenticated', () => {
   cy.request({
     method: 'POST',
     url: `${baseUrl}/auth`,
@@ -19,7 +19,7 @@ Given('1. I am authenticated', () => {
   });
 });
 
-When('1. I send a {string} request to {string}', (method, url) => {
+When('I send a {string} request to {string}', (method, url) => {
   const updatedUrl = url.replace('{{bookingId}}', bookingId);
   cy.request({
     method,
@@ -34,7 +34,7 @@ When('1. I send a {string} request to {string}', (method, url) => {
   });
 });
 
-When('2. I send a {string} request to {string} with request body:', (method, url, requestBody) => {
+When('I send a {string} request to {string} with request body:', (method, url, requestBody) => {
     cy.request({
       method,
       url: `${baseUrl}${url}`,
@@ -46,7 +46,7 @@ When('2. I send a {string} request to {string} with request body:', (method, url
     }).as('response');
   });
 
-When('1. I send a {string} request to {string} with request body from fixture {string}', (method, url, fixtureName) => {
+When('I send a {string} request to {string} with request body from fixture {string}', (method, url, fixtureName) => {
   cy.fixture(fixtureName).then((fixtureData) => {
     cy.request({
       method,
@@ -63,7 +63,7 @@ When('1. I send a {string} request to {string} with request body from fixture {s
   });
 });
 
-When('1. I send a DELETE request to {string}', (url) => {
+When('I send a DELETE request to {string}', (url) => {
   const updatedUrl = url.replace('{{bookingId}}', bookingId);
   cy.request({
     method: 'DELETE',
@@ -78,11 +78,11 @@ When('1. I send a DELETE request to {string}', (url) => {
   });
 });
 
-Then('1. the response status code should be {int}', (statusCode) => {
+Then('the response status code should be {int}', (statusCode) => {
   cy.get('@response').its('status').should('equal', statusCode);
 });
 
-Then('1. the response should have the booking ID', () => {
+Then('the response should have the booking ID', () => {
   cy.get('@response').its('body.bookingid').should('exist').then((id) => {
     bookingId = id;
     cy.log(`Booking ID: ${bookingId}`);
