@@ -27,8 +27,6 @@ module.exports = defineConfig({
     experimentalSessionAndOrigin: true,
     specPattern: 'cypress/e2e/features/*.feature',
     
-  },
-  testFiles: "**/*.feature",
-  testFiles: "**/**/*.feature"
+  }
   
 })
