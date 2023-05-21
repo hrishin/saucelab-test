@@ -27,7 +27,6 @@
   "dependencies": {
     "cross-env": "^7.0.3",
     "cypress-multi-reporters": "^1.6.1",
-    "debug": "^4.3.4",
     "npm": "^8.19.1",
     "prettier": "^2.7.1"
   },
