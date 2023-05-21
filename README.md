@@ -11,7 +11,7 @@ Suggested extensions: https://docs.cypress.io/guides/tooling/IDE-integration#Vis
 - cypress requires [NPM](https://www.npmjs.com) v18+ to be installed
 
 ### Setup Cypress
-You will need to install cypress and link with npm
+You will need to install cypress and link with NPM
 ```bash 
 npm install --save-dev
 npm link
