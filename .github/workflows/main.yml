@@ -27,6 +27,5 @@ jobs:
       - name: install webpack
         run: npm install --save-dev webpack webpack-cli webpack-dev-server
 
-
       - name: Run Cypress tests
-        run: npx cypress run
+        run: npm run cypress:test
