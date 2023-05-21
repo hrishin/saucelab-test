@@ -8,7 +8,7 @@ IDE Installation: Visual Studio code / VS code
 Suggested extensions: https://docs.cypress.io/guides/tooling/IDE-integration#Visual-Studio-Code
 
 ### Prerequisites
-- cypress requires [NPM](https://www.npmjs.com) v14.21.3+ to be installed
+- cypress requires [NPM](https://www.npmjs.com) v18+ to be installed
 
 ### Setup Cypress
 You will need to install cypress and link with npm
