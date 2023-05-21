@@ -10,5 +10,4 @@ Then('I should see the logout link in the product list page menu', () => {
 
 Then('I should able to logout successfully', () => {
     productListPage.clickLogoutLink();
-
 })

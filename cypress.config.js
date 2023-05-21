@@ -1,10 +1,22 @@
 const { defineConfig } = require("cypress");
-
 const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
-const addCucumberPreprocessorPlugin = require("@badeball/cypress-cucumber-preprocessor").addCucumberPreprocessorPlugin;
-const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
+const preprocessor = require("@badeball/cypress-cucumber-preprocessor");
+const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esbuild");
 
-const registerReportPortalPlugin = require("@reportportal/agent-js-cypress/lib/plugin");
+async function setupNodeEvents(on, config) {
+  // Register preprocessor to be able to generate JSON reports after each run, and more,
+  await preprocessor.addCucumberPreprocessorPlugin(on, config);
+
+  // ES Build loader
+  on(
+    "file:preprocessor",
+    createBundler({
+      plugins: [createEsbuildPlugin.default(config)],
+    })
+  );
+
+  return config;
+}
 
 module.exports = defineConfig({
   chromeWebSecurity: false,
@@ -23,10 +35,8 @@ module.exports = defineConfig({
     runMode: 1,
   },
   e2e: {
-    
     experimentalSessionAndOrigin: true,
     specPattern: 'cypress/e2e/features/*.feature',
-    
+    setupNodeEvents,
   }
-  
 })

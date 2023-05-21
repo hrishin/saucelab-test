@@ -7,8 +7,8 @@ IDE Installation: Visual Studio code / VS code
 
 Suggested extensions: https://docs.cypress.io/guides/tooling/IDE-integration#Visual-Studio-Code
 
-### Dependencies
-cypress requires [NPM](https://www.npmjs.com) (version at least 6.14.14) to be installed
+### Prerequisites
+- cypress requires [NPM](https://www.npmjs.com) v14.21.3+ to be installed
 
 ### Setup Cypress
 You will need to install cypress and link with npm
@@ -30,9 +30,11 @@ npx cypress run - To run the test in command line
 
 ## Project Structure:
 Created the POM structure:
+
 a. Inside the project directory, created the following folders:
 
-cypress/e2e: This folder contain the features directory and step_definitions directory.
+cypress/e2e: This folder contains the features directory and step_definitions directory.
+
 a. Inside the cypress/e2e/features folder, created the feature files for each regression scenario. For example:
 
 sauceDemoLogin.feature: Contains test cases related to the login functionality.
