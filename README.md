@@ -1,5 +1,7 @@
 # Cypress (cucumber) tests for saucelab login functionality and page navigation
 
+change profile picture.
+
 # Developer setup
 
 ## Development environment
